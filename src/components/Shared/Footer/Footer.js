@@ -7,6 +7,7 @@ const Footer = () => {
     return (
         <div>
             <div className="text-center navbar__bg">
+                
                 {/* footer image */}
                 <img className="py-4" src="" alt="" />
 

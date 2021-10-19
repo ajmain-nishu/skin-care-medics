@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -42,6 +41,13 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link fs-5" to="/services">
                                     Services
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    className="nav-link fs-5"
+                                    to="/contact">
+                                    Contact
                                 </Link>
                             </li>
                             <li className="nav-item">

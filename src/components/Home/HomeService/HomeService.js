@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomeService.css'
+import './HomeService.css';
+
+
 
 const HomeService = (props) => {
-    const {id, name, img, description} = props.homeservice
+    const { id, name, img, description } = props.homeservice;
     return (
         <div className="col-lg-4 col-sm-6 col-12 gy-4 gx-5">
             <div className="card h-100 shadow-sm homeservice__border">
@@ -21,5 +23,8 @@ const HomeService = (props) => {
         </div>
     );
 };
+
+
+
 
 export default HomeService;
