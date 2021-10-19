@@ -10,6 +10,7 @@ import AuthProvider from './context/AuthProvider';
 import NotFound from './components/NotFound/NotFound'
 import Contact from './components/Home/Contact/Contact';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Doctor from './components/Doctor/Doctor';
 
 
 
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact></Contact>
+          </Route>
+          <Route path="/doctor">
+            <Doctor></Doctor>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

@@ -12,7 +12,7 @@ const Header = () => {
 
                     {/* header logo */}
                     <Link className="navbar-brand" to="/home">
-                        <h2>Madics</h2>
+                        <h2><i>Madics</i></h2>
                     </Link>
 
 
@@ -48,6 +48,13 @@ const Header = () => {
                                     className="nav-link fs-5"
                                     to="/contact">
                                     Contact
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    className="nav-link fs-5"
+                                    to="/doctor">
+                                    Doctor
                                 </Link>
                             </li>
                             <li className="nav-item">
