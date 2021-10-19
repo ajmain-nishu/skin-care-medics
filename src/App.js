@@ -9,6 +9,7 @@ import Header from './components/Shared/Header/Header';
 import AuthProvider from './context/AuthProvider';
 import NotFound from './components/NotFound/NotFound'
 import Contact from './components/Home/Contact/Contact';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 
@@ -26,14 +27,17 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          <PrivateRoute exact path="/service">
+            <Services></Services>
+          </PrivateRoute>
+          <PrivateRoute exact path="/service/:serviceId">
+            <Services></Services>
+          </PrivateRoute>
           <Route path="/register">
             <Registration></Registration>
           </Route>
           <Route path="/login">
             <Login></Login>
-          </Route>
-          <Route path="/services/:serviceId">
-            <Services></Services>
           </Route>
           <Route path="/contact">
             <Contact></Contact>

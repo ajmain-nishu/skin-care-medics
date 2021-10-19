@@ -14,6 +14,8 @@ const useFirebase = () => {
     const [name, setName] = useState('')
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider()
+
+    // google sign in
     const signInUsingGoogle = () => {
         signInWithPopup(auth, googleProvider)
         .then(result => {
@@ -24,6 +26,8 @@ const useFirebase = () => {
             setError(error.message)
         })
     }
+
+    // google and email sign in
     const handleEmail = e => {
         setEmail(e.target.value)
         console.log(e.target.value)
@@ -40,8 +44,9 @@ const useFirebase = () => {
         updateProfile(auth.currentUser, {displayName: name})
         .then(result => { })
     }
+
+    // email log in in
     const handleLogin = e => {
-        
         console.log(email, password)
         signInWithEmailAndPassword(auth, email, password)
         .then(result => {
@@ -53,6 +58,8 @@ const useFirebase = () => {
         })
         e.preventDefault()
     }
+
+    // email registration
     const handleRegistration = e => {
         e.preventDefault()
         if (password.length < 6) {
@@ -60,6 +67,7 @@ const useFirebase = () => {
             return
         }
         
+        // create registration
         createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
             const user = result.user
@@ -71,6 +79,8 @@ const useFirebase = () => {
             setError(error.message)
         })
     }
+
+    // log out
     const logOut = () => {
         signOut(auth)
         .then(() => {
