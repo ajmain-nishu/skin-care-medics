@@ -1,0 +1,7 @@
+.homeservices__bg {
+    background: url('../../../Images/Services/ellipse.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #FFF6F6;
+    background-size: 50% 40%;
+}

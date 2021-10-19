@@ -8,14 +8,14 @@ const Banner = () => {
         <div>
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
-    <div className="carousel-item active">
+    <div className="carousel-item">
       <img src={bannerImgFirst} className="d-block w-100" alt="..." />
       <div className="carousel-caption d-none d-md-block text-black">
         <h1>17 Years of Experience</h1>
         <p>A New Perspective of Shine</p>
       </div>
     </div>
-    <div className="carousel-item">
+    <div className="carousel-item active">
       <img src={bannerImgSecond} className="d-block w-100" alt="..." />
       <div className="carousel-caption d-none d-md-block text-dark">
         <h1>17 Years of Experience</h1>
