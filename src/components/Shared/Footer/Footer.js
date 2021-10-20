@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import footerImg from '../../../Images/footer.png';
 
 
 // footer section
@@ -9,13 +10,13 @@ const Footer = () => {
             <div className="text-center navbar__bg">
                 
                 {/* footer image */}
-                <img className="py-4" src="" alt="" />
+                <img className="py-4" src={footerImg} alt="" />
 
                 {/* footer text */}
                 <p className="fs-5">Copyright &copy; 2021</p>
                 <p className="fs-6">
                     Designed By:
-                    <span className="fw-bold text-secondary">Ajmain Iqtidar Rahman</span>
+                    <span className="fw-bold text-secondary"> Ajmain Iqtidar Rahman</span>
                 </p>
 
                 {/* footer button */}

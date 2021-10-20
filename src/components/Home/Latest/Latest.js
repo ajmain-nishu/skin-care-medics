@@ -22,7 +22,7 @@ const Latest = () => {
                         <div className="text-center pt-4">
                             <h5>Liposuction to your Tummy Tuck</h5>
                             <p>Liposuction</p>
-                            <button className="btn about__btn">READ MORE</button>
+                            <button className="btn about__btn mb-3">READ MORE</button>
                         </div>
                     </div>
 
@@ -34,7 +34,7 @@ const Latest = () => {
                         <div className="text-center pt-4">
                             <h5>Skin Care Advice From A Surgeon</h5>
                             <p>Skin Care</p>
-                            <button className="btn about__btn">READ MORE</button>
+                            <button className="btn about__btn mb-3">READ MORE</button>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@ const Latest = () => {
                         <div className="text-center pt-4">
                             <h5>Gynecomastia After Weight Loss</h5>
                             <p>Gynecomastia</p>
-                            <button className="btn about__btn">READ MORE</button>
+                            <button className="btn about__btn mb-3">READ MORE</button>
                         </div>
 
                     </div>
