@@ -21,9 +21,9 @@ const Footer = () => {
                 {/* footer button */}
                 <NavLink
                     className="text-decoration-none btn btn-secondary mb-4"
-                    to="/login"
+                    to="/contact"
                 >
-                    Login
+                    Contact
                 </NavLink>
             </div>
         </div>

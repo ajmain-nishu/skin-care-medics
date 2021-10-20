@@ -4,7 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 import './Header.css'
 
 const Header = () => {
-    const {logOut, user} = useAuth()
+    const { logOut, user } = useAuth()
     return (
         <div>
             <nav className="navbar navbar-expand-md navbar__bg navbar-light py-3">
@@ -39,10 +39,16 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link fs-5" to="/service">
+                                <Link className="nav-link fs-5" to="/services">
                                     Services
                                 </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link fs-5" to="/service/gallery">
+                                    Gallery
+                                </Link>
+                            </li>
+                            
                             <li className="nav-item">
                                 <Link
                                     className="nav-link fs-5"
@@ -60,82 +66,28 @@ const Header = () => {
 
 
 
-
-
-                            {/* <li className="nav-item">
-                                <Link className="nav-link fs-5" to="/register">
-                                    Register
-                                </Link>
-                            </li>
-                            
-                            <li className="nav-item">
-                                <Link className="nav-link fs-5" to="/login">
-                                    Login
-                                </Link>
-                            </li> */}
-
-
-
-
-
-
-
-
-
                             {user?.email ?
+                                <div>
+                                    <button className="btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>
+                                    <span className="text-muted pt-2"> Signed in as: {user?.displayName}</span>
+                                </div>
+                                :
+                                <div className="d-md-inline-flex">
+                                    <li className="nav-item">
+                                        <Link className="nav-link fs-5" to="/register">
+                                            Register
+                                        </Link>
+                                    </li>
 
-
-
-
-<div>
-<button className="btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>
-<span className="text-muted pt-2"> Signed in as: {user?.displayName}</span>
-</div>
-
-
-:
-
-
-
-                            <div className="d-flex">
-                                <li className="nav-item">
-                                    <Link className="nav-link fs-5" to="/register">
-                                        Register
-                                    </Link>
-                                </li>
-                                
-                                <li className="nav-item">
-                                    <Link className="nav-link fs-5" to="/login">
-                                        Login
-                                    </Link>
-                                </li>
-                            </div>
-
-                            
-
-                           
-
-                            } 
-
-
-
-
-
-
-
-
+                                    <li className="nav-item">
+                                        <Link className="nav-link fs-5" to="/login">
+                                            Login
+                                        </Link>
+                                    </li>
+                                </div>
+                            }
 
                         </ul>
-
-
-                        
-
-
-                        {/* {user?.email && <button className="btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>} */}
-
-
-
-
 
                     </div>
                 </div>

@@ -59,7 +59,7 @@ const Registration = () => {
 
                             {/* registration button part */}
                             <div className="my-3">
-                                    <input className="btn btn-outline-secondary btn-lg" type="submit" value="Log In" />
+                                    <input className="btn btn-outline-secondary btn-lg" type="submit" value="Sign Up" />
                             </div>
                         </form>
 
@@ -69,7 +69,7 @@ const Registration = () => {
 
                         {/* registration google sign in part */}
                         <div className="mb-3 mt-4">
-                        <button className="btn btn-outline-secondary btn-md" onClick={signInUsingGoogle}>Google Sign In</button>
+                        <button className="btn btn-outline-secondary btn-md" onClick={signInUsingGoogle}>Sign Up With Google</button>
 
                         {/* registration login part */}
                         </div>

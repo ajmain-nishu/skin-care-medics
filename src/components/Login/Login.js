@@ -72,7 +72,7 @@ const Login = () => {
 
                             {/* google sign in */}
                             <div className="mb-3 mt-4">
-                                <button className="btn btn-outline-secondary btn-md" onClick={handleGoogleLogin}>Google Sign In</button>
+                                <button className="btn btn-outline-secondary btn-md" onClick={handleGoogleLogin}>Sign In With Google</button>
                             </div>
 
                             {/* new register link */}
