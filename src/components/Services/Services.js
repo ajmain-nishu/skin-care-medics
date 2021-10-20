@@ -33,13 +33,14 @@ const Services = () => {
 
                                 {/* image part */}
                                 <div>
-                                    <img className="" src={singleService.img} alt="" />
+                                    <img src={singleService.img} alt="" />
                                 </div>
 
                                 {/* text part */}
-                                <h3 key={singleService.id}>Name: {singleService.name}</h3>
-                                <h3>Description</h3>
-                                <p>{singleService.description}</p>
+                                <h3 key={singleService.id} className="py-2">Name: {singleService.name}</h3>
+                                <h5 className="text-muted py-2"><i>Duration: {singleService.duration}</i></h5>
+                                <h3 className="text-decoration-underline">Description</h3>
+                                <p className="text-muted">{singleService.description}</p>
 
                             </div>
                         </div>
