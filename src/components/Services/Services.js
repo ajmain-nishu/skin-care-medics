@@ -5,18 +5,39 @@ import { useParams } from 'react-router';
 
 const Services = () => {
     const {serviceId} = useParams()
-    const [servicee, setService] = useState([])
+    const [service, setService] = useState([])
+
+    // local fake data fetch
     useEffect(() => {
-        fetch('/homeServicesData.json')
+        const url = "/homeServicesData.json"
+        fetch(url)
         .then(res => res.json())
-        .then(data => setService(data))
-    }, [])
-    const search = servicee.find(details => details.id === servicee)
-    console.log(search?.name)
+        .then(data => {
+            let searchId = data.filter((singledata) => singledata.id === serviceId);
+            setService(searchId)
+            
+        })
+    }, [serviceId])
     return (
         <div>
-            <h2>Hello {serviceId}</h2>
-            <h2>{servicee?.name}</h2>
+            {
+                service.map(singleService => (
+                    <div>
+                        <div className="container">
+                            <div className="text-center p-5">
+                                <div>
+                                    <img className="" src={singleService.img} alt="" />
+                                </div>
+                            
+                            <h3 key={singleService.id}>Name: {singleService.name}</h3>
+                            <h3>Description</h3>
+                            <p>{singleService.description}</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
         </div>
     );
 };

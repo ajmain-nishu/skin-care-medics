@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
@@ -8,6 +8,18 @@ import './Login.css';
 
 const Login = () => {
     const { signInUsingGoogle, loginError, handleEmail, handleLogin, handlePassword } = useAuth();
+    const location = useLocation()
+    const history = useHistory()
+    const redirect_uri = location.state?.from || '/home'
+
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+        .then(result => {
+            history.push(redirect_uri)
+        })
+    }
+
 
     return (
         <div className="login__bg">
@@ -60,7 +72,7 @@ const Login = () => {
 
                             {/* google sign in */}
                             <div className="mb-3 mt-4">
-                                <button className="btn btn-outline-secondary btn-md" onClick={signInUsingGoogle}>Google Sign In</button>
+                                <button className="btn btn-outline-secondary btn-md" onClick={handleGoogleLogin}>Google Sign In</button>
                             </div>
 
                             {/* new register link */}

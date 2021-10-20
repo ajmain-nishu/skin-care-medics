@@ -57,7 +57,12 @@ const Header = () => {
                                     Doctor
                                 </Link>
                             </li>
-                            <li className="nav-item">
+
+
+
+
+
+                            {/* <li className="nav-item">
                                 <Link className="nav-link fs-5" to="/register">
                                     Register
                                 </Link>
@@ -67,10 +72,71 @@ const Header = () => {
                                 <Link className="nav-link fs-5" to="/login">
                                     Login
                                 </Link>
-                            </li>
+                            </li> */}
+
+
+
+
+
+
+
+
+
+                            {user?.email ?
+
+
+
+
+<div>
+<button className="btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>
+<span className="text-muted pt-2"> Signed in as: {user?.displayName}</span>
+</div>
+
+
+:
+
+
+
+                            <div className="d-flex">
+                                <li className="nav-item">
+                                    <Link className="nav-link fs-5" to="/register">
+                                        Register
+                                    </Link>
+                                </li>
+                                
+                                <li className="nav-item">
+                                    <Link className="nav-link fs-5" to="/login">
+                                        Login
+                                    </Link>
+                                </li>
+                            </div>
+
+                            
+
+                           
+
+                            } 
+
+
+
+
+
+
+
+
+
                         </ul>
-                        <span className="text-muted pt-2">{user?.displayName}&nbsp;</span>
-                        {user?.email && <button className="btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>}
+
+
+                        
+
+
+                        {/* {user?.email && <button className="btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>} */}
+
+
+
+
+
                     </div>
                 </div>
             </nav>

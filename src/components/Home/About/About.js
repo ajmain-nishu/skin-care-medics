@@ -10,7 +10,7 @@ const About = () => {
                     
                     {/* image part */}
                     <div className="col-md-6 col-12">
-                        <img src={aboutImg} alt="" />
+                        <img className="w-100" src={aboutImg} alt="" />
                     </div>
 
                     {/* description part */}

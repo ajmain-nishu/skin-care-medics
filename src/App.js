@@ -9,8 +9,8 @@ import Header from './components/Shared/Header/Header';
 import AuthProvider from './context/AuthProvider';
 import NotFound from './components/NotFound/NotFound'
 import Contact from './components/Home/Contact/Contact';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Doctor from './components/Doctor/Doctor';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 
@@ -28,9 +28,6 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <PrivateRoute exact path="/service">
-            <Services></Services>
-          </PrivateRoute>
           <PrivateRoute exact path="/service/:serviceId">
             <Services></Services>
           </PrivateRoute>
