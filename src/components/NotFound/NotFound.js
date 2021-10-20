@@ -1,8 +1,8 @@
 import React from 'react';
-import './NotFound.css'
+import './NotFound.css';
 
 
-
+//not found section
 const NotFound = () => {
     return (
         <div className="text-center notfound__height">

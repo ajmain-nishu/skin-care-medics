@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import './Header.css'
+import './Header.css';
 
+
+
+// navbar section
 const Header = () => {
     const { logOut, user } = useAuth()
     return (
@@ -30,7 +33,9 @@ const Header = () => {
 
                     {/* header link */}
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav ms-auto pt-2">
+                        <ul className="navbar-nav ms-auto">
+
+                            {/* home link */}
                             <li className="nav-item">
                                 <Link
                                     className="nav-link fs-5"
@@ -38,17 +43,22 @@ const Header = () => {
                                     Home
                                 </Link>
                             </li>
+
+                            {/* services link */}
                             <li className="nav-item">
                                 <Link className="nav-link fs-5" to="/services">
                                     Services
                                 </Link>
                             </li>
+
+                            {/* gallery part */}
                             <li className="nav-item">
                                 <Link className="nav-link fs-5" to="/service/gallery">
                                     Gallery
                                 </Link>
                             </li>
-                            
+
+                            {/* contact part */}
                             <li className="nav-item">
                                 <Link
                                     className="nav-link fs-5"
@@ -56,6 +66,8 @@ const Header = () => {
                                     Contact
                                 </Link>
                             </li>
+
+                            {/* doctor part */}
                             <li className="nav-item">
                                 <Link
                                     className="nav-link fs-5"
@@ -65,20 +77,25 @@ const Header = () => {
                             </li>
 
 
-
                             {user?.email ?
                                 <div>
+
+                                    {/* log out button */}
                                     <button className="btn btn-outline-secondary btn-md mt-2" onClick={logOut}>Log Out</button>
+                                    {/*sign in user name */}
                                     <span className="text-muted pt-2"> Signed in as: {user?.displayName}</span>
                                 </div>
                                 :
                                 <div className="d-md-inline-flex">
+
+                                    {/* registration link */}
                                     <li className="nav-item">
                                         <Link className="nav-link fs-5" to="/register">
                                             Register
                                         </Link>
                                     </li>
 
+                                    {/* login link */}
                                     <li className="nav-item">
                                         <Link className="nav-link fs-5" to="/login">
                                             Login
@@ -86,14 +103,16 @@ const Header = () => {
                                     </li>
                                 </div>
                             }
-
                         </ul>
-
                     </div>
                 </div>
             </nav>
         </div>
     );
 };
+
+
+
+
 
 export default Header;

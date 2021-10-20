@@ -5,14 +5,14 @@ import './Login.css';
 
 
 
-
+// navbar login section
 const Login = () => {
     const { signInUsingGoogle, loginError, handleEmail, handleLogin, handlePassword } = useAuth();
     const location = useLocation()
     const history = useHistory()
     const redirect_uri = location.state?.from || '/home'
 
-
+    // google sign in arrow functio button
     const handleGoogleLogin = () => {
         signInUsingGoogle()
         .then(result => {

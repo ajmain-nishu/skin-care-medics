@@ -1,11 +1,11 @@
 import React from 'react';
-import latestImgOne from '../../../Images/latest-1.jpg'
-import latestImgTwo from '../../../Images/latest-2.jpg'
-import latestImgThree from '../../../Images/latest-3.jpg'
+import latestImgOne from '../../../Images/latest-1.jpg';
+import latestImgTwo from '../../../Images/latest-2.jpg';
+import latestImgThree from '../../../Images/latest-3.jpg';
 
 
 
-
+// home latest section
 const Latest = () => {
     return (
         <div className="py-5 ">

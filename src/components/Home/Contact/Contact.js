@@ -3,7 +3,7 @@ import "./Contact.css";
 
 
 
-
+// navbar contact section
 const Contact = () => {
     return (
         <div>

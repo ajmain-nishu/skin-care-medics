@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
+
+
+
+// navbar registration section
 const Registration = () => {
     const {handleEmail, handlePassword, handleRegistration, handleName, error, signInUsingGoogle} = useAuth()
     return (
@@ -85,5 +89,9 @@ const Registration = () => {
         </div>
     );
 };
+
+
+
+
 
 export default Registration;

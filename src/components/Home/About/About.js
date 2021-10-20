@@ -2,6 +2,8 @@ import React from "react";
 import aboutImg from "../../../Images/about.png";
 import "./About.css";
 
+
+// home about section
 const About = () => {
     return (
         <div className="pt-5">
@@ -36,5 +38,8 @@ const About = () => {
         </div>
     );
 };
+
+
+
 
 export default About;

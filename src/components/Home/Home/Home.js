@@ -5,7 +5,7 @@ import HomeServices from '../HomeServices/HomeServices';
 import Latest from '../Latest/Latest';
 
 
-
+// home all component added
 const Home = () => {
     return (
         <div>

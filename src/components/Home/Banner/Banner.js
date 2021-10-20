@@ -1,11 +1,10 @@
 import React from "react";
 import bannerImgFirst from "../../../Images/banner_top_first.png";
 import bannerImgSecond from "../../../Images/banner_top_second.png";
-import "./Banner.css";
 
 
 
-
+// home header banner section
 const Banner = () => {
   return (
     <div>
