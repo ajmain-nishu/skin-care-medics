@@ -13,7 +13,8 @@ Dermatology is the branch of medicine dealing with the skin. It is a speciality 
 
 
 ### Usages Purpose
-- This is a Skin Care Medics website.
+- This is a health-related responsive website.
+- Users can sign up and log in to this website using email or google. To order a service, a user must be logged in.
 - It can be used to know the many kind of skin names, pictures, description etc. of skin care medics.
 - Knowing this information will allow you to learn a lot about skin. You will get encouragement in this yourself. To do something by yourself.
 - skin care is very good habit becasue its makes skin beautiful.
